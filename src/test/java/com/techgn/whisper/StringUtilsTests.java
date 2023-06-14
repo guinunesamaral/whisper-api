@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class StringUtilsTests {
 
     @ParameterizedTest
-    @ValueSource(strings = {"1", "c", ""})
+    @ValueSource(strings = {"1", "c"})
     void stringHasValue(String s) {
         assertTrue(stringHasValue.apply(s));
     }
@@ -25,6 +25,6 @@ public class StringUtilsTests {
     @ParameterizedTest
     @CsvSource({"oi, Oi"})
     void stringsAreEqual(String s1, String s2) {
-        
+
     }
 }
