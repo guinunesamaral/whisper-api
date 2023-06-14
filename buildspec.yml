@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto17  # Specify the desired Java runtime version
+  pre_build:
+    commands:
+      - echo "Executing pre-build commands"  # Add any pre-build commands if needed
+  build:
+    commands:
+      - ./gradlew clean build  # Build the Spring Boot application using Gradle wrapper
+  post_build:
+    commands:
+      - echo "Executing post-build commands"  # Add any post-build commands if needed
+
+artifacts:
+  files:
+    - build/libs/*.jar  # Specify the artifact(s) to be generated and included in the build output
