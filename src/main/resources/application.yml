@@ -1,0 +1,30 @@
+database:
+  host: whisper.cc8ttu5jq0hh.us-east-2.rds.amazonaws.com
+  username: postgres
+  password: 19root99
+
+server:
+  port: 9000
+
+springdoc:
+  api-docs:
+    path: /api-docs
+
+spring:
+  datasource:
+    url: jdbc:postgresql://${database.host}/postgres
+    username: ${database.username}
+    password: ${database.password}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    defer-datasource-initialization: true
+    hibernate:
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+  output:
+    ansi:
+      enabled: always
