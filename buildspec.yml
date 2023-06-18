@@ -18,3 +18,4 @@ phases:
 artifacts:
   files:
     - build/libs/*.jar  # Specify the artifact(s) to be generated and included in the build output
+    - appspec.yml
