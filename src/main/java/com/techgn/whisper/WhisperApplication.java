@@ -10,5 +10,4 @@ public class WhisperApplication {
     public static void main(String[] args) {
         SpringApplication.run(WhisperApplication.class, args);
     }
-
 }
